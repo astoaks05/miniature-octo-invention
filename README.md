@@ -227,6 +227,10 @@ Congratulations on finishing the basic converter! Here are some ideas to keep bu
 - **Free APIs**: [Public APIs List](https://github.com/public-apis/public-apis)
 - **Icon libraries**: [Font Awesome](https://fontawesome.com/), [Heroicons](https://heroicons.com/)
 
+## You're still Here?
+- Take a look at some web-app stacks/frameworks/libraries like React, Vue, Svelte, etc. and try to implement those for this.
+- Don't just stop at Cursor. The developer world is teeming with new AI-tools at every corner, so if Cursor fails you, perhaps a CLI might save you!
+
 ## Remember
 
 The best way to learn is to **build something you're excited about**. If weight conversion interests you more than length, modify this project! If you want to build a cooking measurement converter, go for it! The skills you learned here apply to any project.
