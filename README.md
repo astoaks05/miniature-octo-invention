@@ -1,4 +1,4 @@
-# Sprint 3: Unit Converter - Beginner JavaScript Project
+# Sprint 3: Unit Converter - Beginner JavaScript Project (and Cursor familiarization)
 **DevSprint Fall 2025**
 
 ## Program Context
