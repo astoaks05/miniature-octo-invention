@@ -17,7 +17,31 @@ This starter code provides:
 
 ### 1. Open the Project
 - Download or clone this repository to your computer
-- Open the entire folder in a code editor like [VS Code](https://code.visualstudio.com/)
+- Open the entire folder in a code editor (see IDE setup below)
+
+### 1.5 Setting Up Cursor IDE (Recommended)
+
+**What is Cursor?** Cursor is an AI-powered code editor built on VS Code that helps you write code faster with intelligent suggestions and explanations.
+
+#### Installation
+1. Download Cursor from [cursor.com](https://cursor.com/)
+2. Install it like any other application
+3. Open Cursor and go to `File → Open Folder...`
+4. Select the `miniature-octo-invention` folder
+
+#### Helpful Cursor Features for Beginners
+- **Cmd+K (Mac) / Ctrl+K (Windows)**: AI inline editing - Select code and ask Cursor to modify it
+- **Cmd+L (Mac) / Ctrl+L (Windows)**: Open AI chat - Ask questions about your code or get help debugging
+- **Tab to accept suggestions**: As you type, Cursor predicts what you'll write next
+- **Highlight code + ask questions**: Select confusing code and ask "What does this do?"
+
+#### Learning Resources for Cursor
+- [Cursor Documentation](https://docs.cursor.com/)
+- [Getting Started with Cursor](https://docs.cursor.com/get-started/migrate-from-vscode)
+- [Cursor Keyboard Shortcuts](https://docs.cursor.com/cmdk/shortcuts)
+- [Cursor YouTube Tutorials](https://www.youtube.com/@cursor-ai)
+
+**Alternative:** You can also use [VS Code](https://code.visualstudio.com/) if you prefer a traditional editor. The Live Server extension works great for this project!
 
 ### 2. Preview in Browser
 - Find `index.html` in your file explorer
