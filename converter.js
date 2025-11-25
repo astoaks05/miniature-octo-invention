@@ -33,17 +33,23 @@ const METERS_TO_IMPERIAL = {
 // This function takes a value and units, and returns the converted value.
 
 function convertLength(value, fromUnit, toUnit) {
-  // TODO: First, convert the input value to meters
-  // HINT: Multiply the value by the conversion factor from METRIC_TO_METERS
-  // Example: If value is 5 and fromUnit is "centimeter"
-  //          then meters = 5 * 0.01 = 0.05
-
-  const meters = 0; // TODO: Replace 0 with the correct calculation
-
-  // TODO: Next, convert from meters to the target imperial unit
-  // HINT: Multiply meters by the conversion factor from METERS_TO_IMPERIAL
-
-  const result = 0; // TODO: Replace 0 with the correct calculation
+  // First, convert the input value to meters
+  if (fromUnit in METRIC_TO_METERS) {
+    meters = value * METRIC_TO_METERS[fromUnit];
+  } else if (fromUnit in METERS_TO_IMPERIAL) {
+    meters = value * METERS_TO_IMPERIAL[fromUnit];
+  } else {
+    throw new Error(`Invalid from unit: ${fromUnit}`);
+  }
+  
+  // Convert from meters to the target imperial unit
+  if (toUnit in METERS_TO_IMPERIAL) {
+    result = meters * METERS_TO_IMPERIAL[toUnit];
+  } else if (toUnit in METRIC_TO_METERS) {
+    result = meters * METRIC_TO_METERS[toUnit];
+  } else {
+    throw new Error(`Invalid to unit: ${toUnit}`);
+  }
 
   // Round to 4 decimal places for cleaner display
   return Math.round(result * 10000) / 10000;
@@ -57,21 +63,17 @@ function convertLength(value, fromUnit, toUnit) {
 let conversionHistory = [];
 
 function addToHistory(value, fromUnit, toUnit, result) {
-  // TODO: Create an object that stores the conversion details
-  // HINT: It should have properties for value, fromUnit, toUnit, and result
-
+  
   const conversion = {
-    // TODO: Fill in the properties
-    // value: ???,
-    // fromUnit: ???,
-    // toUnit: ???,
-    // result: ???
+    value: value,        
+    fromUnit: fromUnit,  
+    toUnit: toUnit,     
+    result: result      
   };
 
-  // TODO: Add the conversion object to the conversionHistory array
-  // HINT: Use the .push() method to add to an array
+  conversionHistory.push(conversion);
 
-  // TODO: Call displayHistory() to update the display
+  displayHistory();
 }
 
 // ============================================
@@ -84,11 +86,7 @@ function displayResult(value, fromUnit, toUnit, result) {
   const resultDiv = document.getElementById('result');
   const resultText = document.getElementById('result-text');
 
-  // TODO: Create a message to show the user
-  // Example: "5 centimeters = 1.9685 inches"
-  // HINT: Use template literals with backticks: `text ${variable} text`
-
-  const message = ''; // TODO: Replace with your message
+  const message = `${value} ${fromUnit} = ${result} ${toUnit}`; 
 
   // Update the page
   resultText.textContent = message;
@@ -98,21 +96,16 @@ function displayResult(value, fromUnit, toUnit, result) {
 function displayHistory() {
   const historyList = document.getElementById('history-list');
 
-  // TODO: Check if history is empty
-  // HINT: Use conversionHistory.length to check
-  if (true) { // TODO: Replace true with the actual check
+  if (conversionHistory.length === 0) { 
     historyList.innerHTML = '<p style="color: #888;">No conversions yet. Try one above!</p>';
     return;
   }
 
-  // TODO: Create HTML for each conversion in history
-  // HINT: Use .map() to convert each item into HTML, then .join() to combine them
-  // HINT: You can reverse the array first with .slice().reverse() to show newest first
+  const reversedHistory = conversionHistory.slice().reverse();
 
-  let historyHTML = ''; // TODO: Generate the history HTML
-
-  // Example of what one history item might look like:
-  // <div class="history-item">5 cm = 1.9685 in</div>
+  const historyHTML = reversedHistory.map(function(conversion) {
+    return `<div class="history-item">${conversion.value} ${conversion.fromUnit} = ${conversion.result} ${conversion.toUnit}</div>`;
+  }).join(''); 
 
   historyList.innerHTML = historyHTML;
 }
@@ -125,45 +118,37 @@ function displayHistory() {
 // Get the form element
 const form = document.getElementById('converter-form');
 
-// TODO: Add an event listener for the "submit" event
-// HINT: Use addEventListener('submit', function)
-
 form.addEventListener('submit', function(event) {
   // Prevent the page from reloading
   event.preventDefault();
 
-  // TODO: Get the values from the form inputs
-  // HINT: Use document.getElementById() to get each input
-  // HINT: For input elements, use .value to get the value
-  // HINT: For the number input, convert to a number with Number() or parseFloat()
+  const value = Number(document.getElementById('value').value); 
+  const fromUnit = document.getElementById('from-unit').value; 
+  const toUnit = document.getElementById('to-unit').value; 
 
-  const value = 0; // TODO: Get the value from the "value" input
-  const fromUnit = ''; // TODO: Get the value from the "from-unit" select
-  const toUnit = ''; // TODO: Get the value from the "to-unit" select
-
-  // TODO: Validate that all fields are filled
-  // HINT: Check if value is greater than 0 and units aren't empty
-  if (false) { // TODO: Add validation check
+  if (value <= 0 || fromUnit === '' || toUnit === '') { 
     alert('Please fill in all fields with valid values!');
     return;
   }
 
-  // TODO: Call the convertLength function
-  const result = 0; // TODO: Call convertLength with the right parameters
-
-  // TODO: Display the result
-  // HINT: Call displayResult() with all the parameters
-
-  // TODO: Add to history
-  // HINT: Call addToHistory() with all the parameters
+  const result = convertLength(value, fromUnit, toUnit);
+  displayResult(value, fromUnit, toUnit, result);
+  addToHistory(value, fromUnit, toUnit, result);
 });
+
+const clearHistoryButton = document.getElementById('clear-history');
+clearHistoryButton.addEventListener('click', function(event){
+  event.preventDefault();
+  conversionHistory = [];
+  displayHistory();
+})
 
 // ============================================
 // BONUS CHALLENGES (Optional)
 // ============================================
 // Once you've completed all the TODOs above, try these:
 //
-// 1. Add a "Clear History" button that empties the conversion history
+
 // 2. Save history to localStorage so it persists when the page reloads
 // 3. Add input validation to show helpful error messages
 // 4. Add a "Swap Units" button to quickly reverse the conversion
