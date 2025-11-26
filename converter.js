@@ -61,6 +61,22 @@ function convertLength(value, fromUnit, toUnit) {
 // Keep track of past conversions so users can see what they've converted
 
 let conversionHistory = [];
+function saveHistoryToStorage() {
+  localStorage.setItem('conversionHistory', JSON.stringify(conversionHistory));
+}
+
+function loadHistoryFromStorage() {
+
+  const savedHistory = localStorage.getItem('conversionHistory');
+
+  if (savedHistory) {
+    conversionHistory = JSON.parse(savedHistory);
+  } else {
+    conversionHistory = [];
+  }
+
+  displayHistory();
+}
 
 function addToHistory(value, fromUnit, toUnit, result) {
   
@@ -72,6 +88,7 @@ function addToHistory(value, fromUnit, toUnit, result) {
   };
 
   conversionHistory.push(conversion);
+  saveHistoryToStorage();
 
   displayHistory();
 }
@@ -140,8 +157,12 @@ const clearHistoryButton = document.getElementById('clear-history');
 clearHistoryButton.addEventListener('click', function(event){
   event.preventDefault();
   conversionHistory = [];
+
+  localStorage.removeItem('conversionHistory');
   displayHistory();
 })
+
+loadHistoryFromStorage();
 
 // ============================================
 // BONUS CHALLENGES (Optional)
@@ -149,7 +170,7 @@ clearHistoryButton.addEventListener('click', function(event){
 // Once you've completed all the TODOs above, try these:
 //
 
-// 2. Save history to localStorage so it persists when the page reloads
+
 // 3. Add input validation to show helpful error messages
 // 4. Add a "Swap Units" button to quickly reverse the conversion
 // 5. Add more unit types (e.g., nautical miles, hands, fathoms)
