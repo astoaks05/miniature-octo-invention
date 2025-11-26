@@ -164,14 +164,13 @@ clearHistoryButton.addEventListener('click', function(event){
 
 loadHistoryFromStorage();
 
+
 // ============================================
 // BONUS CHALLENGES (Optional)
 // ============================================
 // Once you've completed all the TODOs above, try these:
-//
 
 
-// 3. Add input validation to show helpful error messages
 // 4. Add a "Swap Units" button to quickly reverse the conversion
 // 5. Add more unit types (e.g., nautical miles, hands, fathoms)
 // 6. Add reverse conversion (Imperial to Metric)
