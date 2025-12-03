@@ -1,5 +1,6 @@
 body {
-font-family: Arial, sans-serif;
+font-family: Anton sans-serif;
+letter-spacing: 2px;
 background-color: #fcfcfd;
 color: #212529;
 }
@@ -7,3 +8,10 @@ color: #212529;
 .container {
 max-width: 600px;
 }
+
+h1 {
+    font-family: Anton, cursive;
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+

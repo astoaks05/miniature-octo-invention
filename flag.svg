@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1520 800">
+<!-- Red background -->
+<rect width="1520" height="800" fill="#B22234"/>
+
+<!-- White stripes -->
+<rect y="61.5" width="1520" height="61.5" fill="#FFFFFF"/>
+<rect y="184.5" width="1520" height="61.5" fill="#FFFFFF"/>
+<rect y="307.5" width="1520" height="61.5" fill="#FFFFFF"/>
+<rect y="430.5" width="1520" height="61.5" fill="#FFFFFF"/>
+<rect y="553.5" width="1520" height="61.5" fill="#FFFFFF"/>
+<rect y="676.5" width="1520" height="61.5" fill="#FFFFFF"/>
+
+<!-- Blue canton -->
+<rect width="608" height="430.5" fill="#3C3B6E"/>
+
+<!-- Stars - 50 stars in 9 rows (alternating 6 and 5 stars) -->
+<g fill="#FFFFFF">
+    <!-- Row 1: 6 stars -->
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(0,0)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(101,0)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(202,0)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(303,0)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(404,0)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(505,0)"/>
+    
+    <!-- Row 2: 5 stars -->
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(50.5,48)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(151.5,48)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(252.5,48)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(353.5,48)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(454.5,48)"/>
+    
+    <!-- Row 3: 6 stars -->
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(0,96)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(101,96)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(202,96)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(303,96)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(404,96)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(505,96)"/>
+    
+    <!-- Row 4: 5 stars -->
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(50.5,144)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(151.5,144)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(252.5,144)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(353.5,144)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(454.5,144)"/>
+    
+    <!-- Row 5: 6 stars -->
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(0,192)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(101,192)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(202,192)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(303,192)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(404,192)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(505,192)"/>
+    
+    <!-- Row 6: 5 stars -->
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(50.5,240)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(151.5,240)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(252.5,240)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(353.5,240)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(454.5,240)"/>
+    
+    <!-- Row 7: 6 stars -->
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(0,288)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(101,288)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(202,288)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(303,288)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(404,288)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(505,288)"/>
+    
+    <!-- Row 8: 5 stars -->
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(50.5,336)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(151.5,336)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(252.5,336)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(353.5,336)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(454.5,336)"/>
+    
+    <!-- Row 9: 6 stars -->
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(0,384)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(101,384)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(202,384)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(303,384)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(404,384)"/>
+    <path d="M50,35 L52,42 L59,42 L53,46 L55,53 L50,49 L45,53 L47,46 L41,42 L48,42 Z" transform="translate(505,384)"/>
+</g>
+</svg>

@@ -25,7 +25,8 @@ const METERS_TO_IMPERIAL = {
   inch: 39.3701,         // 1 meter = 39.3701 inches
   foot: 3.28084,         // TODO: How many feet in 1 meter?
   yard: 1.09361,         // 1 meter = 1.09361 yards
-  mile: 0.000621371      // TODO: How many miles in 1 meter?
+  mile: 0.000621371,
+  eagles: 0.48614487117      
 };
 
 // ============================================
@@ -166,14 +167,3 @@ clearHistoryButton.addEventListener('click', function(event){
 })
 
 loadHistoryFromStorage();
-
-
-// ============================================
-// BONUS CHALLENGES (Optional)
-// ============================================
-// Once you've completed all the TODOs above, try these:
-// 5. Add more unit types (e.g., nautical miles, hands, fathoms)
-// 6. Add reverse conversion (Imperial to Metric)
-// 7. Show the conversion formula used (e.g., "cm × 0.39 = in")
-// 8. Add a comparison visual (e.g., "That's about as long as X soccer fields!")
-//
