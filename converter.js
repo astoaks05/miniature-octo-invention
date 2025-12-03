@@ -17,7 +17,8 @@ const METRIC_TO_METERS = {
   millimeter: 0.001,     // 1 millimeter = 0.001 meters
   centimeter: 0.01,      // 1 centimeter = 0.01 meters
   meter: 1,              // 1 meter = 1 meter (base unit)
-  kilometer: 1000        // TODO: How many meters in 1 kilometer?
+  kilometer: 1000,       // TODO: How many meters in 1 kilometer?
+  nauticalMiles: 1852
 };
 
 const METERS_TO_IMPERIAL = {
@@ -107,22 +108,24 @@ function displayResult(value, fromUnit, toUnit, result) {
 
   // Update the page
   resultText.textContent = message;
-  resultDiv.classList.add('show');
+  resultDiv.style.display = 'block';
 }
 
 function displayHistory() {
   const historyList = document.getElementById('history-list');
 
   if (conversionHistory.length === 0) { 
-    historyList.innerHTML = '<p style="color: #888;">No conversions yet. Try one above!</p>';
+    historyList.innerHTML = '<p class="text-muted mb-0">No conversions yet. Try one above!</p>';
     return;
   }
 
   const reversedHistory = conversionHistory.slice().reverse();
 
-  const historyHTML = reversedHistory.map(function(conversion) {
-    return `<div class="history-item">${conversion.value} ${conversion.fromUnit} = ${conversion.result} ${conversion.toUnit}</div>`;
-  }).join(''); 
+  const historyHTML = `<div class="list-group">${
+    reversedHistory.map(function(conversion) {
+      return `<div class="list-group-item">${conversion.value} ${conversion.fromUnit} = ${conversion.result} ${conversion.toUnit}</div>`;
+    }).join('')
+  }</div>`;
 
   historyList.innerHTML = historyHTML;
 }
@@ -169,13 +172,8 @@ loadHistoryFromStorage();
 // BONUS CHALLENGES (Optional)
 // ============================================
 // Once you've completed all the TODOs above, try these:
-
-
-// 4. Add a "Swap Units" button to quickly reverse the conversion
 // 5. Add more unit types (e.g., nautical miles, hands, fathoms)
 // 6. Add reverse conversion (Imperial to Metric)
 // 7. Show the conversion formula used (e.g., "cm × 0.39 = in")
 // 8. Add a comparison visual (e.g., "That's about as long as X soccer fields!")
 //
-// Remember: Start small! Get the basic converter working first,
-// then add features one at a time. Test after each change!
